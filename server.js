@@ -20,10 +20,16 @@ const PORT = process.env.PORT || 8000
 
 app.use(bodyParser.json())
 app.use(cookieParser())
+
 app.use(cors({
-  origin: 'http://localhost:5173', 
-  credentials: true 
+    origin: process.env.FRONTEND_URL,
+    credentials: true
 }));
+
+app.get('/', (req, res) => {
+    res.send('Stock Portfolio API is running 🚀');
+});
+
 app.use('/auth', AuthRouter)
 app.use('/data', DataRouter)
 app.use('/market', MarketRouter);

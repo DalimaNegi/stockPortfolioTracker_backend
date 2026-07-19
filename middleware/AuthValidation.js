@@ -1,4 +1,4 @@
-const Joi = require('joi')
+const Joi = require('joi')  //data validation library used to validate incoming request data before it reaches your controller.
 
 const signupValidation = (req, res, next) => {
     const schema = Joi.object(

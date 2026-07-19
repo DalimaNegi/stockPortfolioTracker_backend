@@ -1,7 +1,7 @@
 const NodeCache = require('node-cache');
 
-const quoteCache = new NodeCache({
-  stdTTL: 300,
+const quoteCache = new NodeCache({ //in-memory cache
+  stdTTL: 300,   //to temporarily store API responses for 5 minutes
   checkperiod: 60
 });
 

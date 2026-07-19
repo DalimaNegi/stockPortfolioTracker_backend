@@ -1,5 +1,4 @@
 const { getCachedIndices } = require('../jobs/fetchIndex');
-//const { predictor } = require('../utils/AI-Ops');
 const getHistoricalData = require('../utils/DataFetch');
 
 const indexFetch = async (req, res) => {
